@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+
 def check_card(f):
    wraps(f)
    def validation(*args, **kwargs):
