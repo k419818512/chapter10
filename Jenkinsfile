@@ -4,7 +4,7 @@ pipeline {
       stage('Preparing the environment') {
          steps {
             sh 'echo Preparing the enviornment'
-            sh 'apt clean'
+            sh 'apt-get clean'
             }
          }  
       stage('Code Quality') {
