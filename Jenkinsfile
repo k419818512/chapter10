@@ -11,6 +11,7 @@ pipeline {
       stage('Code Quality') {
          steps {
             sh 'echo checking the code quality'
+            sh 'python3 -m pylint app.py'
          }
       }
       stage('Tests') {
