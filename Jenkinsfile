@@ -4,7 +4,7 @@ pipeline {
       stage('Preparing the environment') {
          steps {
             sh 'echo Preparing the enviornment'
-            sh 'python3 -m pip install -r requirements.txt'
+            sh 'python -m pip install -r requirements.txt'
             }
          }  
       stage('Code Quality') {
