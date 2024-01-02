@@ -3,7 +3,7 @@ pipeline {
    stages {
       stage('Preparing the environment') {
          steps {
-            sh 'Preparing the enviornment'
+            sh 'echo Preparing the enviornment'
             }
          }  
       stage('Code Quality') {
