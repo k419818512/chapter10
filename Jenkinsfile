@@ -18,17 +18,17 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh 'exit 1'
+            sh 'echo preparing Build'
          }
       }
       stage('Delivery') {
          steps {
-            sh 'exit 1'
+            sh 'echo Preparing delivery'
          }
       }
       stage('Deploy') {
          steps {
-            sh 'exit 1'
+            sh 'echo preparing deploy'
          }
       }     
    }
