@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from flask import Flask, request, jsonify
 from functools import wraps
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
@@ -11,13 +11,15 @@ def check_card(f):
     if not data.get("status"):
       response = {"approved":False,
       "newLimit":data.get("limit"),
-      "reason":"Blocked Card"}
+      "reason":"Blocked Card"
+      }
       return jsonify(response)
 
     if data.get("limit") < data.get("transaction").get("amount"):
       response = {"approved":False,
       "newLimit":data.get("limit"),
-      "reason":"Transaction above the limit"}
+      "reason":"Transaction above the limit"
+      }
       return jsonify(response)
     return f(*args, **kwargs)
   return (validation)
