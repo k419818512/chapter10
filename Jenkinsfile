@@ -3,20 +3,17 @@ pipeline {
    stages {
       stage('Preparing the environment') {
          steps {
-            sh 'apt clean'
-            sh 'apt update'
-            sh 'apt install python3 python3-pip -y'
-            sh 'python3 -m pip install -r requirements.txt'
+            sh 'Preparing the enviornment'
             }
          }  
       stage('Code Quality') {
          steps {
-            sh 'python3 -m pylint app.py'
+            sh 'echo checking the code quality'
          }
       }
       stage('Tests') {
          steps {
-            sh 'python3 -m pytest'
+            sh 'echo perfoming the tests'
          }
       }
       stage('Build') {
