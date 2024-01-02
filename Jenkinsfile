@@ -5,7 +5,7 @@ pipeline {
          steps {
             sh 'echo Preparing the enviornment'
             sh 'apt-get clean'
-            sh 'python3 -m pip install -r requirements.txt'
+            sh 'python3 -m pip install -r requirements.txt --break-system-packages'
             }
          }  
       stage('Code Quality') {
