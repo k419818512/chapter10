@@ -3,6 +3,9 @@ pipeline {
    stages {
       stage('Preparing the environment') {
          steps {
+            sh 'apt clean'
+            sh 'apt update'
+            sh 'apt install python3 python3-pip -y'
             sh 'python3 -m pip install -r requirements.txt'
             }
          }  
