@@ -23,7 +23,7 @@ def check_card(f):
                      }
          return jsonify(response)
       return f(*args, **kwargs)
-   return (validation)
+#return (validation)
 
 @app.route("/api/transaction",methods=["POST"])
 @check_card
