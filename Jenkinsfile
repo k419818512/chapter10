@@ -5,6 +5,7 @@ pipeline {
          steps {
             sh 'echo Preparing the enviornment'
             sh 'apt-get clean'
+            sh 'python3 -m pip install requirements.txt'
             }
          }  
       stage('Code Quality') {
