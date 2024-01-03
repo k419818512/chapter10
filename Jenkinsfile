@@ -17,6 +17,7 @@ pipeline {
       stage('Tests') {
          steps {
             sh 'echo perfoming the tests'
+            sh 'python3 -m pytest'
          }
       }
       stage('Build') {
