@@ -12,6 +12,7 @@ from APP import APP
 def client():
    APP.config['TESTING'] = True
    client = APP.test_client()
+   
    yield client
 
 def test_valid_transaction(client):
