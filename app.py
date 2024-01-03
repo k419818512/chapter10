@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 from functools import wraps
 from flask import Flask, request, jsonify
 
@@ -23,7 +24,7 @@ def check_card(func):
                      }
          return jsonify(response)
          return func(*args, **kwargs)
-   return (validation)
+   return validation
 
 @APP.route("/api/transaction",methods=["POST"])
 @check_card
