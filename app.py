@@ -25,7 +25,7 @@ def check_card(func):
          return func(*args, **kwargs)
    return (validation)
 
-@app.route("/api/transaction",methods=["POST"])
+@APP.route("/api/transaction",methods=["POST"])
 @check_card
 def transaction():
    card = request.get_json()
